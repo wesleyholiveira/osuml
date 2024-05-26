@@ -11,6 +11,7 @@ position = Vector2(32, 32)
 
 [node name="FpsMeter" parent="." instance=ExtResource("2_tt05s")]
 
-[node name="Enemy" parent="." instance=ExtResource("3_31t1w")]
+[node name="Enemy" parent="." node_paths=PackedStringArray("Target") instance=ExtResource("3_31t1w")]
 position = Vector2(96, 128)
 speed = 100
+Target = NodePath("../Player")
