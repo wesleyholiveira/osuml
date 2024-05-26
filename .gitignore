@@ -3,3 +3,6 @@
 
 # Ignore temporary files
 *.tmp
+
+# Ignore Visual Studio Code project files
+.vscode/
