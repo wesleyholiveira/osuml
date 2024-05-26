@@ -9,6 +9,10 @@ const ACTION = {
 	"MOVE_DOWN": "move_down",
 }
 
+func _init(entity: Node2D, speed: float) -> void:
+	super(entity, speed)
+	pass
+
 func move(target_pos: Vector2, speed: float) -> Vector2:
 	var pos = Input.get_vector(
 			ACTION.MOVE_RIGHT,

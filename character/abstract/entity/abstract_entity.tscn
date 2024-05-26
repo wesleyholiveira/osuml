@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://74dkrn0hr418"]
+
+[ext_resource type="Script" path="res://character/abstract/entity/abstract_entity.gd" id="1_ttnph"]
+
+[node name="AbstractEntity" type="Node2D"]
+script = ExtResource("1_ttnph")

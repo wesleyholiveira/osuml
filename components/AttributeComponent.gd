@@ -1,21 +1,32 @@
 extends Node2D
 
+## AttributeComponent class.
 class_name AttributeComponent
 
-@export var ch_name: String = ""
-@export var dmg: int = 1
-@export var def: int = 1
-@export var endurance = 0
-@export var hp: int = 20
-@export var sp: int = 5
-@export_range(1, 15) var speed: float:
-	get:
-		return 100 if !speed else speed
-	set(speedo):
-		speed = speedo * 100
+## The MovementComponent associated with this AttributeComponent.
+var _movement_component: Variant : set = set_movement_component, get = get_movement_component
 
-func _ready():
+## AttributeComponent constructor.
+func _init(entity:Node2D, speed:float, playable: bool):
+
+	if playable:
+		self._movement_component = InputComponent.new(entity, speed)
+	else:
+		self._movement_component = MovementComponent.new(entity, speed)
+
 	pass
 
-func _process(delta):
+## Returns the MovementComponent associated with this AttributeComponent.
+func get_movement_component() -> Variant:
+	return _movement_component
+
+## Sets the MovementComponent associated with this AttributeComponent.
+func set_movement_component(movement_component: Variant) -> void:
+	_movement_component = movement_component
+	pass
+
+func _ready():
+	get_movement_component().name = "MovementComponent" 
+
+	add_child(get_movement_component())
 	pass
