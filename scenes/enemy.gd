@@ -1,6 +1,8 @@
 extends Area2D
 
 @export var speed = 50
+@export var Target: Node2D = null
+
 var playerPos: Vector2
 var velocity: Vector2
 
@@ -22,7 +24,7 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 
 func _on_timer_timeout():
 	print("IN")
-	playerPos = get_parent().get_node("Player").position
+	playerPos = Target.position
 	set_process(true)
 	
 	pass # Replace with function body.
