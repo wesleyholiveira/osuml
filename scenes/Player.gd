@@ -2,12 +2,11 @@ class_name Player
 
 extends Area2D
 
-@export var speed = 400
+@onready var player: AttributeComponent = $CebolaoCharacter
 var screen_size
 
 func _ready():
 	screen_size = get_viewport_rect().size
-
 
 func _process(delta):
 	var velocity = Vector2.ZERO
@@ -17,7 +16,7 @@ func _process(delta):
 		"move_up",
 		"move_down",
 		0.5
-	) * speed
-	
+	) * player.speed
+
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)

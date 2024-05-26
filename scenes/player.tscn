@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8mcavl44me3k"]
+[gd_scene load_steps=5 format=3 uid="uid://c8mcavl44me3k"]
 
 [ext_resource type="Script" path="res://scenes/Player.gd" id="1_3s2x0"]
+[ext_resource type="PackedScene" uid="uid://dxgkm54wgb7bv" path="res://components/characters/CebolaoCharacter.tscn" id="2_78fx7"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_k83d6"]
 
@@ -9,6 +10,10 @@ size = Vector2(32, 32)
 
 [node name="Player" type="Area2D"]
 script = ExtResource("1_3s2x0")
+
+[node name="CebolaoCharacter" parent="." instance=ExtResource("2_78fx7")]
+sp = 20
+speed = 5.0
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(32, 32)
