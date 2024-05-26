@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://igd17bg03lye"]
+
+[ext_resource type="PackedScene" uid="uid://lstlek8a38o" path="res://components/MovementComponent.tscn" id="1_1w35l"]
+[ext_resource type="Script" path="res://scenes/Enemy.gd" id="1_pn655"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iulic"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qonil"]
+
+[node name="Enemy" type="Area2D"]
+script = ExtResource("1_pn655")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_iulic")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(32, 32)
+texture = SubResource("CanvasTexture_qonil")
+
+[node name="MovementComponent" parent="." instance=ExtResource("1_1w35l")]

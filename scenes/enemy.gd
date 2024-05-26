@@ -1,17 +1,18 @@
 extends Area2D
 
+class_name Enemy
+
 @export var speed = 100
 @export var Target: Node2D = null
 
-var playerPos: Vector2
-var velocity: Vector2
+var counter = 0
 
 func _ready():
 	pass
 
 func _process(delta):
-	playerPos = Target.position
-	position = position.move_toward(playerPos, delta * speed)
-
-func _on_visible_on_screen_notifier_2d_screen_exited():
-	queue_free()
+	if counter >= 40:
+		position = $MovementComponent.move(Target.position, speed * (delta * counter))
+		counter = 0
+		
+	counter += 1
