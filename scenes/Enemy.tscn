@@ -3,15 +3,17 @@
 [ext_resource type="PackedScene" uid="uid://lstlek8a38o" path="res://components/MovementComponent.tscn" id="1_1w35l"]
 [ext_resource type="Script" path="res://scenes/Enemy.gd" id="1_pn655"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iulic"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkwf0"]
+size = Vector2(32, 32)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qonil"]
 
-[node name="Enemy" type="Area2D"]
+[node name="Enemy" type="RigidBody2D"]
+gravity_scale = 0.0
 script = ExtResource("1_pn655")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_iulic")
+shape = SubResource("RectangleShape2D_nkwf0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(32, 32)
