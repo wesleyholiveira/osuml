@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 
-@export var speed = 100
+@export var speed = 1
 @export var Target: Node2D = null
 
 var collision_radius = 16

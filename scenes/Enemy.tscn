@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://lstlek8a38o" path="res://components/MovementComponent.tscn" id="1_1w35l"]
 [ext_resource type="Script" path="res://scenes/Enemy.gd" id="1_pn655"]
 
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ms0ta"]
 radius = 16.0
 
@@ -10,6 +11,7 @@ radius = 16.0
 
 [node name="Enemy" type="RigidBody2D"]
 gravity_scale = 0.0
+
 max_contacts_reported = 4
 contact_monitor = true
 script = ExtResource("1_pn655")
