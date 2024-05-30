@@ -11,4 +11,4 @@ script = ExtResource("1_g7utr")
 metadata/_edit_use_anchors_ = true
 
 [node name="CebolaoLunar" parent="." instance=ExtResource("3_8qixk")]
-_speed = 195.946
+position = Vector2(320, 184)

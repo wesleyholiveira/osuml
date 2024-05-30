@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://scenes/Enemy.gd" id="1_pn655"]
 
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_ms0ta"]
 radius = 16.0
 
@@ -60,7 +59,6 @@ func move(target_pos: Vector2, speed: float) -> Vector2:
 
 [node name="Enemy" type="RigidBody2D"]
 gravity_scale = 0.0
-
 max_contacts_reported = 4
 contact_monitor = true
 script = ExtResource("1_pn655")
