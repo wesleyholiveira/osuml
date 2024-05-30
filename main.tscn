@@ -1,16 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bcxiueuqjtqh0"]
+[gd_scene load_steps=4 format=3 uid="uid://bcxiueuqjtqh0"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_g7utr"]
-[ext_resource type="PackedScene" uid="uid://bsavq5v0ywfu4" path="res://character/playable/cebolao_lunar/cebolao_lunar.tscn" id="2_nnks1"]
 [ext_resource type="PackedScene" uid="uid://05oj1g2nas7s" path="res://scenes/FPSMeter.tscn" id="2_tt05s"]
-[ext_resource type="PackedScene" uid="uid://cv60v64tkw1rl" path="res://character/abstract/playable/abstract_playable.tscn" id="4_by4a3"]
+[ext_resource type="PackedScene" uid="uid://bsavq5v0ywfu4" path="res://character/playable/cebolao_lunar/cebolao_lunar.tscn" id="3_8qixk"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_g7utr")
 
-[node name="CebolaoLunar" parent="." instance=ExtResource("2_nnks1")]
-position = Vector2(320, 176)
-
 [node name="FpsMeter" parent="." instance=ExtResource("2_tt05s")]
+metadata/_edit_use_anchors_ = true
 
-[node name="AbstractPlayable" parent="." instance=ExtResource("4_by4a3")]
+[node name="CebolaoLunar" parent="." instance=ExtResource("3_8qixk")]
+_speed = 195.946

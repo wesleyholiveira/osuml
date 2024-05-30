@@ -14,8 +14,9 @@ func _ready():
 func _process(delta):
 	counter += 1
 	if counter >= 10:
-		move_and_collide($MovementComponent.move(Target.position, speed * (delta * counter)) - position)
+		#move_and_collide($MovementComponent.move(Target.position, speed * (delta * counter)) - position)
 		counter = 0
+	pass
 
 
 func _on_body_entered(body):
