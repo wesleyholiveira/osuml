@@ -21,6 +21,10 @@ window/size/viewport_width=640
 window/size/viewport_height=360
 window/vsync/vsync_mode=0
 
+[dotnet]
+
+project/assembly_name="osuml"
+
 [input]
 
 move_right={

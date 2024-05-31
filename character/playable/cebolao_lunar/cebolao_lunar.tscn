@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsavq5v0ywfu4"]
+
+[ext_resource type="Script" path="res://character/playable/cebolao_lunar/cebolao_lunar.gd" id="1_sqi6s"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_84p1n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fi5n3"]
+radius = 16.0
+
+[node name="CebolaoLunar" type="RigidBody2D"]
+script = ExtResource("1_sqi6s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.871717, 0.271364, 0.447659, 1)
+scale = Vector2(32, 32)
+texture = SubResource("CanvasTexture_84p1n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fi5n3")

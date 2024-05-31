@@ -1,2 +1,8 @@
 # Godot 4+ specific ignores
 .godot/
+
+# Ignore temporary files
+*.tmp
+
+# Ignore Visual Studio Code project files
+.vscode/
