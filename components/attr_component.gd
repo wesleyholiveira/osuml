@@ -25,9 +25,9 @@ func get_movement_component() -> MovementComponent:
 	return _movement_component
 
 func _enter_tree():
-	_root_entity = get_parent()
 	assert($MovementComponent != null and $MovementComponent is MovementComponent, "AttrComponent requires a valid MovementComponent node as a child")
 	assert(get_parent() != null and (get_parent() is AbstractHostile or get_parent() is AbstractPlayable), "The owner of AttrComponent must be a Hostile or Playable entity")
+	_root_entity = get_parent()
 	_movement_component = $MovementComponent
 	pass
 
