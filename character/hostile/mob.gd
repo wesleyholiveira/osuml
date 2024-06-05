@@ -11,5 +11,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	#print(position)
-	self.move_and_collide(attribute.move(delta, 1) - position)
+	#self.move_and_collide(attribute.move(delta, 1) - position)
 	pass

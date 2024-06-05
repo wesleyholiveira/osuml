@@ -26,8 +26,7 @@ func _move_hostile(delta: float, counter: float) -> void:
 	pass
 
 func _ready():
-	print(owner.get_root_entity())
-	if true:
+	if owner.get_root_entity() is AbstractPlayable:
 		_move = Callable(self, "_move_playable")
 	else:
 		_move = Callable(self, "_move_hostile")

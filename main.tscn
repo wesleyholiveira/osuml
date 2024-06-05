@@ -8,6 +8,7 @@
 script = ExtResource("1_5pxen")
 
 [node name="FpsMeter" parent="." instance=ExtResource("2_tt05s")]
+top_level = true
 metadata/_edit_use_anchors_ = true
 
 [node name="CebolaoLunar" parent="." instance=ExtResource("3_i4jsh")]
