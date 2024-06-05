@@ -1,6 +1,6 @@
 extends Node2D
 
-var enemy = preload("res://character/hostile/mob.tscn")
+#var enemy = preload("res://character/hostile/mob.tscn")
 
 var counter: float = 0.0
 var enemy_limit: int = 1000
@@ -11,7 +11,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
+	"""
 	counter += delta
 	if counter > 0.1 and enemy_limit > 0:
 		var e = enemy.instantiate()
@@ -22,4 +22,5 @@ func _process(delta):
 		
 		enemy_limit -= 1
 		counter = 0
+	"""
 	pass

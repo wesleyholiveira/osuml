@@ -2,11 +2,17 @@ extends AbstractEntity
 
 class_name AbstractHostile
 
-signal target_changed
+@export var _target : RigidBody2D : get = get_target, set = set_target
 
-func _init(target: RigidBody2D = null) -> void:
+func get_target() -> RigidBody2D:
+	return _target
 
-	super(target)
+func set_target(value: RigidBody2D) -> void:
+	_target = value
+	pass
+
+func _init() -> void:
+	super()
 	pass
 
 func _ready() -> void:

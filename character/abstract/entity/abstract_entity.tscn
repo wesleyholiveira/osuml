@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwtb57xiqjut8"]
-
-[ext_resource type="Script" path="res://character/abstract/entity/abstract_entity.gd" id="1_b7fw3"]
-
-[node name="AbstractEntity" type="RigidBody2D"]
-script = ExtResource("1_b7fw3")
