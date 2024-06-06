@@ -9,11 +9,8 @@ func get_target() -> RigidBody2D:
 
 func set_target(value: RigidBody2D) -> void:
 	_target = value
-	pass
+
 
 func _init() -> void:
-	super()
-	pass
+	super(HostileMovementComponent.new())
 
-func _ready() -> void:
-	pass

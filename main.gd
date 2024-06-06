@@ -22,5 +22,3 @@ func _process(delta):
 		
 		enemy_limit -= 1
 		counter = 0
-	
-	pass
